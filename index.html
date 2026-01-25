@@ -4,32 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber4 - data. information. knowledge. wisdom.</title>
-	<style>
-	    body {
-		/* Uses the system's default sans-serif for instant loading */
-		font-family: sans-serif;
-		line-height: 1.5;
-		color: #222;
-		max-width: 700px; /* Slightly narrower for better focus */
-		margin: 40px auto;
-		padding: 0 20px;
-	    }
-	    header {
-		border-bottom: 1px solid #ddd;
-		margin-bottom: 2rem;
-	    }
-	    h1 { margin-bottom: 0; }
-	    .tagline { color: #666; margin-bottom: 1rem; }
-	    section { margin-bottom: 2rem; }
-	    .creation-date { font-family: monospace; font-size: 0.9em; color: #555; }
-	    footer {
-		margin-top: 4rem;
-		font-size: 0.85rem;
-		color: #777;
-		border-top: 1px solid #eee;
-		padding-top: 1rem;
-	    }
-	</style>
+<style>
+    /* Define the Imperial Palettes */
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #222222;
+        --tagline-color: #666666;
+        --border-color: #dddddd;
+        --code-bg: #f4f4f4;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color: #1a1a1a; /* Deep charcoal */
+            --text-color: #eeeeee; /* Soft white */
+            --tagline-color: #aaaaaa;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+        }
+    }
+
+    body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        max-width: 750px;
+        margin: 40px auto;
+        padding: 0 20px;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    }
+
+    header {
+        border-bottom: 2px solid var(--border-color);
+        margin-bottom: 2rem;
+        padding-bottom: 10px;
+    }
+
+    h1 { margin: 0; letter-spacing: -1px; }
+
+    .tagline { 
+        font-style: italic; 
+        color: var(--tagline-color); 
+    }
+
+    section { margin-bottom: 3rem; }
+
+    .creation-date { 
+        font-family: monospace; 
+        background: var(--code-bg); 
+        padding: 2px 6px; 
+        border-radius: 3px;
+    }
+
+    footer {
+        margin-top: 5rem;
+        font-size: 0.85rem;
+        color: var(--tagline-color);
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+    }
+</style>
 </head>
 <body>
 
