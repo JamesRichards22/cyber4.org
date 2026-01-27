@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Coordinates Not Found</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #222222;
+            --tagline-color: #666666;
+            --border-color: #dddddd;
+            --code-bg: #f4f4f4;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #eeeeee;
+                --tagline-color: #aaaaaa;
+                --border-color: #444444;
+                --code-bg: #2d2d2d;
+            }
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 750px;
+            margin: 100px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 2rem;
+            padding-bottom: 10px;
+        }
+
+        h1 { font-size: 3rem; margin: 0; }
+        
+        .status-code {
+            font-family: monospace;
+            background: var(--code-bg);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+        }
+
+        p { margin: 2rem 0; }
+
+        a {
+            color: var(--text-color);
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            background: var(--code-bg);
+        }
+
+        footer {
+            margin-top: 5rem;
+            font-size: 0.85rem;
+            color: var(--tagline-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>404</h1>
+        <div class="tagline">The Three Legged Pig finds no data here.</div>
+    </header>
+
+    <section>
+        <p>The requested sector of <strong>cyber4.org</strong> is either classified or does not exist.</p>
+        <p><span class="status-code">ERROR_CODE: DATA_NOT_FOUND</span></p>
+        <br><br>
+        <a href="/">Return to Command Center</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 cyber4.org. Under Imperial Command.</p>
+    </footer>
+
+</body>
+</html>
