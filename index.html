@@ -44,6 +44,26 @@
 
     h1 { margin: 0; letter-spacing: -1px; }
 
+    /* Refined Link Styling */
+    a {
+        color: var(--text-color); /* Matches your white/black text */
+        text-decoration: none;    /* Removes the clunky default underline */
+        border-bottom: 1px solid var(--tagline-color); /* Elegant, thin underline */
+        transition: all 0.2s ease-in-out;
+        padding-bottom: 1px;
+    }
+
+    a:hover {
+        color: var(--tagline-color); /* Subtle fade on hover */
+        border-bottom-color: var(--text-color); /* Brightens the line on hover */
+        background-color: var(--code-bg); /* Very subtle highlight */
+    }
+
+    /* For links already visited - keeping them consistent */
+    a:visited {
+        color: var(--text-color);
+    }
+
     .tagline { 
         font-style: italic; 
         color: var(--tagline-color); 
