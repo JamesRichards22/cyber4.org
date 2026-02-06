@@ -1,0 +1,76 @@
+/* cyber.css - Imperial Design System */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --tagline-color: #666666;
+    --border-color: #dddddd;
+    --code-bg: #f4f4f4;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #eeeeee;
+        --tagline-color: #aaaaaa;
+        --border-color: #444444;
+        --code-bg: #2d2d2d;
+    }
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+}
+
+h1 { margin: 0; letter-spacing: -1px; }
+
+.tagline { 
+    font-style: italic; 
+    color: var(--tagline-color); 
+}
+
+section { margin-bottom: 3rem; }
+
+/* Links */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--tagline-color);
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    background-color: var(--code-bg);
+    border-bottom-color: var(--text-color);
+}
+
+/* Metadata and 404 Status */
+.mono-box { 
+    font-family: monospace; 
+    background: var(--code-bg); 
+    padding: 2px 8px; 
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.center { text-align: center; margin-top: 100px; }
+
+footer {
+    margin-top: 5rem;
+    font-size: 0.85rem;
+    color: var(--tagline-color);
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
