@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap link (even for 2 pages, it's good practice)
+Sitemap: https://cyber4.org/sitemap.xml
