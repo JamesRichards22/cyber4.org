@@ -110,6 +110,10 @@ p {
     transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
 }
 
+:root[data-theme="light"] .theme-toggle-thumb {
+    background: #b0b0b0;
+}
+
 .theme-toggle[aria-checked="true"] .theme-toggle-track {
     background: var(--text-color);
 }
