@@ -7,19 +7,33 @@
     <link rel="icon" href="c4-small.ico" type="image/x-icon">
     <link rel="stylesheet" href="cyber4.css">
 </head>
-<body class="center">
+<body>
+
     <header>
-        <h1>404</h1>
-        <div class="tagline">Sector not found in the Three Legged Pig archives.</div>
+        <div class="site-title">
+            <h1>404</h1>
+            <div class="tagline">Sector not found in the Three Legged Pig archives.</div>
+        </div>
+        <button type="button" class="theme-toggle" role="switch" aria-checked="false">
+            <span class="theme-toggle-label">Dark Mode</span>
+            <span class="theme-toggle-track">
+                <span class="theme-toggle-thumb"></span>
+            </span>
+        </button>
     </header>
-    <section>
-        <p>The requested data is either classified or non-existent.</p>
-        <p><span class="mono-box">STATUS: ERROR_DATA_MISSING</span></p>
-        <br>
-        <a href="/">Return to Command Center</a>
-    </section>
+
+    <main>
+        <section>
+            <p>The requested data is either classified or non-existent.</p>
+            <p><span class="mono-box">STATUS: ERROR_DATA_MISSING</span></p>
+            <br>
+            <a href="/">Return to Command Center</a>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2026 cyber4.org. Hosted on GitHub Pages.</p>
     </footer>
+    <script src="theme-toggle.js" defer></script>
 </body>
 </html>
