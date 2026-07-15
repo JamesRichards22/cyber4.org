@@ -1,5 +1,6 @@
-/* cyber.css - Imperial Design System */
+/* cyber4.css - Imperial Design System */
 :root {
+    color-scheme: light;
     --bg-color: #ffffff;
     --text-color: #222222;
     --tagline-color: #666666;
@@ -9,6 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        color-scheme: dark;
         --bg-color: #1a1a1a;
         --text-color: #eeeeee;
         --tagline-color: #aaaaaa;
@@ -18,6 +20,7 @@
 }
 
 :root[data-theme="light"] {
+    color-scheme: light;
     --bg-color: #ffffff;
     --text-color: #222222;
     --tagline-color: #666666;
@@ -26,6 +29,7 @@
 }
 
 :root[data-theme="dark"] {
+    color-scheme: dark;
     --bg-color: #1a1a1a;
     --text-color: #eeeeee;
     --tagline-color: #aaaaaa;
@@ -48,6 +52,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
     border-bottom: 2px solid var(--border-color);
     margin-bottom: 2rem;
     padding-bottom: 10px;
@@ -122,6 +128,12 @@ p {
     transform: translateX(16px);
 }
 
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 .tagline { 
     font-style: italic; 
     color: var(--tagline-color); 
@@ -134,7 +146,7 @@ a {
     color: var(--text-color);
     text-decoration: none;
     border-bottom: 1px solid var(--tagline-color);
-    transition: all 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 a:hover {
@@ -159,4 +171,38 @@ footer {
     color: var(--tagline-color);
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
+}
+
+/* Mobile mode */
+@media (max-width: 600px) {
+    body {
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+
+    .theme-toggle {
+        padding: 8px 0;
+    }
+
+    footer {
+        margin-top: 3rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    a,
+    .theme-toggle-track,
+    .theme-toggle-thumb {
+        transition: none;
+    }
 }
