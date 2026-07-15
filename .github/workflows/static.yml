@@ -37,8 +37,9 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          # web.archive.org is slow/rate-limited and would cause flaky failures
-          args: --no-progress --exclude 'web\.archive\.org' 'htdocs/**/*.html'
+          # web.archive.org is slow/rate-limited and would cause flaky failures.
+          # --root-dir lets lychee resolve root-relative links (/media/...) in local files.
+          args: --no-progress --root-dir '${{ github.workspace }}/htdocs' --exclude 'web\.archive\.org' 'htdocs/**/*.html'
           fail: true
 
   deploy:
